@@ -7,10 +7,10 @@ def rename_images(directory: Path):
 
     changed = 0
     for idx, f in enumerate(files, start=1):
-        if idx > 35:
-            break
+        # if idx > 35:
+        #     break
 
-        new_name = f"{idx:04d}.jpg"
+        new_name = f"20260426_gpt_sticker_{idx:02d}.jpg"
         new_path = f.with_name(new_name)
 
         if new_path == f:
@@ -28,6 +28,6 @@ def rename_images(directory: Path):
 
 if __name__ == "__main__":
     dir_path = Path(
-        r"D:\DEV\.Projects\TLU\PTDL\DynamicID_fork_prv\dataset\base_image_dataset\2"
+        r"D:\MEDIA\20260426_Sticker"
     ).resolve()
     rename_images(dir_path)
